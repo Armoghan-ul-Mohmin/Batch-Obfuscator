@@ -5,7 +5,7 @@
 
 <p align="left"> <a href="https://github.com/ryo-ma/github-profile-trophy"><img src="https://github-profile-trophy.vercel.app/?username=armoghan-ul-mohmin" alt="armoghan-ul-mohmin" /></a> </p>
 
-<p align="left"> <a href="https://twitter.com/https://twitter.com/armoghan12?t=sk2zn7ecqqsjeljgn6etng&s=09" target="blank"><img src="https://img.shields.io/twitter/follow/https://twitter.com/armoghan12?t=sk2zn7ecqqsjeljgn6etng&s=09?logo=twitter&style=for-the-badge" alt="https://twitter.com/armoghan12?t=sk2zn7ecqqsjeljgn6etng&s=09" /></a> </p>
+<p align="left"> <a href="https://twitter.com/https://twitter.com/armoghan12?t=pspixggbmrfqmazr7t0chq&s=08" target="blank"><img src="https://img.shields.io/twitter/follow/https://twitter.com/armoghan12?t=pspixggbmrfqmazr7t0chq&s=08?logo=twitter&style=for-the-badge" alt="https://twitter.com/armoghan12?t=pspixggbmrfqmazr7t0chq&s=08" /></a> </p>
 
 - 🔭 I’m currently working on [Batch Obfuscator](https://github.com/Armoghan-ul-Mohmin/Batch-Obfuscator)
 
@@ -15,7 +15,7 @@
 
 <h3 align="left">Connect with me:</h3>
 <p align="left">
-<a href="https://twitter.com/https://twitter.com/armoghan12?t=sk2zn7ecqqsjeljgn6etng&s=09" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/twitter.svg" alt="https://twitter.com/armoghan12?t=sk2zn7ecqqsjeljgn6etng&s=09" height="30" width="40" /></a>
+<a href="https://twitter.com/https://twitter.com/armoghan12?t=pspixggbmrfqmazr7t0chq&s=08" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/twitter.svg" alt="https://twitter.com/armoghan12?t=pspixggbmrfqmazr7t0chq&s=08" height="30" width="40" /></a>
 <a href="https://discord.gg/https://discord.com/users/AL1825#5946" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/discord.svg" alt="https://discord.com/users/AL1825#5946" height="30" width="40" /></a>
 </p>
 
