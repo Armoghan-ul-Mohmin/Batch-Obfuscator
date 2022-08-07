@@ -8,32 +8,33 @@ import sys
 import os
 
 
+
+####################################################################################################################################
+
 # Clear Console
 def clear():
     os.system('clear')
 
+####################################################################################################################################
+
 # Take Data from a file as user input
 
-Goal = "start C:/WINDOWS/System32/calc.exe"
+Goal = "nex.bat"
 #Goal = input("Please pick a batch file: ")
-#File_Content = open(Goal, "r")
+File_Content = open(Goal, "r")
 # for Code in File_Content:
 #   print(Code, end=" ")
-#File_Content.close
+File_Content.close
+
 ####################################################################################################################################
 
 # Generate Random veariable
+
 clear(),
-print ("\nEnter Minimum Length For Random Veariable:")
-input_a = input()
-print ("\nEnter Maximum Length For Random Veariable:")
-input_b = input()
-a=int(input_a)
-b=int(input_b)
-#print(type(a))
-#print(type(b))
+a = input("\nEnter Minimum Length For Random Veariable:")
+b = input("\nEnter Maximum Length For Random Veariable:")
 randoms=[]
-def get_random_mess(Min_len=a, Max_len=b):
+def get_random_mess(Min_len=int (a), Max_len= int (b)):
    # print(a, b)
     global randoms
 
@@ -45,19 +46,25 @@ def get_random_mess(Min_len=a, Max_len=b):
             return rand
 
 
-# print(get_random_mess())
+#print("Your Random Veariable is: ")
+#print(get_random_mess())
+
 ####################################################################################################################################
 
 # Obfuscate Code 
+
 set_operator = get_random_mess()
 space_charactor = get_random_mess()
 equal_charactor = get_random_mess()
-
+Silence = get_random_mess()
 prolog = [
+    #f"@echo off",
     f"set {set_operator}=set",
     f"%{set_operator}% {space_charactor} = ",
     f"%{set_operator}% %{space_charactor}% {equal_charactor}==",
-    f"%{set_operator}% %{space_charactor}%DummyName%{equal_charactor}%HelloWorld ",
+    #f"%{set_operator}% %{space_charactor}% {Silence} %{equal_charactor}% @echo off ",
+    f"%{set_operator}% %{space_charactor}%Goal%{equal_charactor}%HelloWorld ",
+    #f"echo %Goal%",
 ]
 
 ####################################################################################################################################
@@ -83,11 +90,11 @@ code=[] + prolog + var_settings
     
 
 ####################################################################################################################################
+
+# Print Final Code
+
 final_code="\n" .join(code)
 with open ("payload.bat","w") as handle:
     handle.write(final_code)
 
 ####################################################################################################################################
-
-
-print(alphabet[char])print(alphabet[char])
