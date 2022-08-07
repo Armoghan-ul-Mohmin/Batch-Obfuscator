@@ -9,21 +9,21 @@ import os
 
 
 # Clear Console
-def clear_console():
+def clear():
     os.system('clear')
 
 # Take Data from a file as user input
 
-
-Goal = input("Please pick a batch file: ")
-File_Content = open(Goal, "r")
+Goal = "start C:/WINDOWS/System32/calc.exe"
+#Goal = input("Please pick a batch file: ")
+#File_Content = open(Goal, "r")
 # for Code in File_Content:
 #   print(Code, end=" ")
-File_Content.close
+#File_Content.close
 ####################################################################################################################################
 
 # Generate Random veariable
-clear_console(),
+clear(),
 print ("\nEnter Minimum Length For Random Veariable:")
 input_a = input()
 print ("\nEnter Maximum Length For Random Veariable:")
@@ -52,16 +52,42 @@ def get_random_mess(Min_len=a, Max_len=b):
 set_operator = get_random_mess()
 space_charactor = get_random_mess()
 equal_charactor = get_random_mess()
-Silence = get_random_mess()
+
 prolog = [
     f"set {set_operator}=set",
     f"%{set_operator}% {space_charactor} = ",
     f"%{set_operator}% %{space_charactor}% {equal_charactor}==",
-    f"%{set_operator}% %{space_charactor}% {Silence} %{equal_charactor}% @echo off ",
     f"%{set_operator}% %{space_charactor}%DummyName%{equal_charactor}%HelloWorld ",
 ]
 
-code=[] + prolog
+####################################################################################################################################
+
+#Our Own Dictionary For Batch
+
+def create_veariable (varname, value):
+    return f"%{set_operator}% %{space_charactor}%{varname}%{equal_charactor}%{value} "
+
+alphabet ={}
+
+var_settings = []
+
+for char in string.printable:
+    varname = get_random_mess()
+    value = char
+    var_settings.append(create_veariable(varname, value))
+    alphabet [value] = varname
+
+#print ("\n".join(var_settings))
+
+code=[] + prolog + var_settings
+    
+
+####################################################################################################################################
 final_code="\n" .join(code)
 with open ("payload.bat","w") as handle:
     handle.write(final_code)
+
+####################################################################################################################################
+
+
+print(alphabet[char])print(alphabet[char])
