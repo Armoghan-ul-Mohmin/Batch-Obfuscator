@@ -53,12 +53,12 @@ def get_random_mess(Min_len=int (a), Max_len= int (b)):
 
 # Obfuscate Code 
 
-set_operator = get_random_mess()
+#set_operator = get_random_mess()
 space_charactor = get_random_mess()
 equal_charactor = get_random_mess()
 Silence = get_random_mess()
 prolog = [
-    #f"@echo off",
+    f"@echo off",
     f"set {set_operator}=set",
     f"%{set_operator}% {space_charactor} = ",
     f"%{set_operator}% %{space_charactor}% {equal_charactor}==",

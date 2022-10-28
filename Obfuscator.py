@@ -83,6 +83,7 @@ code=[] + prolog + var_settings
     
 
 ####################################################################################################################################
+
 final_code="\n" .join(code)
 with open ("payload.bat","w") as handle:
     handle.write(final_code)
@@ -90,4 +91,4 @@ with open ("payload.bat","w") as handle:
 ####################################################################################################################################
 
 
-print(alphabet[char])print(alphabet[char])
+#print(alphabet[char])print(alphabet[char])
