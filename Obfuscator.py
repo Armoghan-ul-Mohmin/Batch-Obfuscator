@@ -6,34 +6,80 @@ import random
 import string
 import sys
 import os
+import pyfiglet
+import colorama
+from colorama import Fore
 
+####################################################################################################################################
 
 # Clear Console
 def clear():
     os.system('clear')
 
-# Take Data from a file as user input
+####################################################################################################################################
 
-Goal = "start C:/WINDOWS/System32/calc.exe"
-#Goal = input("Please pick a batch file: ")
-#File_Content = open(Goal, "r")
-# for Code in File_Content:
-#   print(Code, end=" ")
-#File_Content.close
+# Print coloured text
+def prYellow(skk): print("\033[93m {}\033[00m" .format(skk))            #Yellow Colour Text Formate=(prYellow("Hello World, "))
+ 
+ 
+def prLightPurple(skk): print("\033[94m {}\033[00m" .format(skk))       #LightPurple Colour Text Formate=(prLightPurple("Hello World, "))
+ 
+ 
+def prPurple(skk): print("\033[95m {}\033[00m" .format(skk))            #Purple Colour Text Formate=(prPurple("Hello World, "))
+ 
+ 
+def prCyan(skk): print("\033[96m {}\033[00m" .format(skk))              #Cyan Colour Text Formate=(prCyan("Hello World, "))
+ 
+ 
+def prLightGray(skk): print("\033[97m {}\033[00m" .format(skk))         #Lightgray Colour Text Formate=(prLightGray("Hello World, "))
+ 
+ 
+def prBlack(skk): print("\033[98m {}\033[00m" .format(skk))             #Black Colour Text Formate=(prBlack("Hello World, "))
+
+
+def prRed(skk): print("\033[91m {}\033[00m" .format(skk))               #Red Colour Text Formate=(prRed("Hello World, "))
+ 
+ 
+def prGreen(skk): print("\033[92m {}\033[00m" .format(skk))             #Green Colour Text Formate=(prGreen("Hello World, "))
+
+####################################################################################################################################
+
+# Banner
+clear()
+def banner():
+    ascii_banner = pyfiglet.figlet_format("Batch Obfuscator")
+    print(ascii_banner)
+
+####################################################################################################################################
+
+banner()
+print()
+Goal = input("Enter File name:")
+
+if Goal.endswith(".bat"):
+    File_Content = open(Goal, "r")
+#    for Code in File_Content:
+#       print(Code, end=" ")
+    File_Content.close
+else:
+  print("Please pick a batch file")
+
+
+####################################################################################################################################
+
+# Length of Random veariable
+print()
+prRed('Note: Minimum Length amd Maximum Length can not be same')
+
+a = input("\nEnter Minimum Length For Random Veariable:")
+b = input("\nEnter Maximum Length For Random Veariable:")
+
 ####################################################################################################################################
 
 # Generate Random veariable
-clear(),
-print ("\nEnter Minimum Length For Random Veariable:")
-input_a = input()
-print ("\nEnter Maximum Length For Random Veariable:")
-input_b = input()
-a=int(input_a)
-b=int(input_b)
-#print(type(a))
-#print(type(b))
+
 randoms=[]
-def get_random_mess(Min_len=a, Max_len=b):
+def get_random_mess(Min_len=int (a), Max_len= int (b)):
    # print(a, b)
     global randoms
 
@@ -43,9 +89,12 @@ def get_random_mess(Min_len=a, Max_len=b):
         if rand not in randoms:
             randoms.append(rand)
             return rand
+print()
+#prGreen("################################################################")
+#prGreen("Your Random Veariable is:")
+#prGreen(get_random_mess())
+#prGreen("################################################################")
 
-
-# print(get_random_mess())
 ####################################################################################################################################
 
 # Obfuscate Code 
@@ -77,18 +126,17 @@ for char in string.printable:
     var_settings.append(create_veariable(varname, value))
     alphabet [value] = varname
 
-#print ("\n".join(var_settings))
+prYellow ("\n".join(var_settings))
 
 code=[] + prolog + var_settings
     
 
 ####################################################################################################################################
 
+
 final_code="\n" .join(code)
 with open ("payload.bat","w") as handle:
     handle.write(final_code)
+    prCyan("Your Payload has been saved in file:///Batch-Obfuscator/payload.bat")
 
 ####################################################################################################################################
-
-
-#print(alphabet[char])print(alphabet[char])
