@@ -15,6 +15,10 @@ from colorama import Fore
 # Clear Console
 def clear():
     os.system('clear')
+    
+####################################################################################################################################
+# Working Directory
+path = os.getcwd()
 
 ####################################################################################################################################
 
@@ -103,11 +107,14 @@ space_charactor = get_random_mess()
 equal_charactor = get_random_mess()
 
 prolog = [
+    f"@echo off",
     f"set {set_operator}=set",
     f"%{set_operator}% {space_charactor} = ",
-    f"%{set_operator}% %{space_charactor}% {equal_charactor}==",
-    f"%{set_operator}% %{space_charactor}%DummyName%{equal_charactor}%HelloWorld ",
+    f"%{set_operator}%%{space_charactor}% {equal_charactor}= =",
+    f"%{set_operator}%%{space_charactor}% DummyName %{equal_charactor}% HelloWorld ",
+    f"%{set_operator}%%{space_charactor}% DummyNames %{equal_charactor}% Batch-Obfuscation!! ",
 ]
+
 
 ####################################################################################################################################
 
@@ -126,7 +133,7 @@ for char in string.printable:
     var_settings.append(create_veariable(varname, value))
     alphabet [value] = varname
 
-prYellow ("\n".join(var_settings))
+#prYellow ("\n".join(var_settings))
 
 code=[] + prolog + var_settings
     
@@ -137,6 +144,6 @@ code=[] + prolog + var_settings
 final_code="\n" .join(code)
 with open ("payload.bat","w") as handle:
     handle.write(final_code)
-    prCyan("Your Payload has been saved in file:///Batch-Obfuscator/payload.bat")
+    print("Your Payload has been saved in file://"+path+"/payload.bat")
 
 ####################################################################################################################################
